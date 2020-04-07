@@ -12,6 +12,18 @@ Things you may want to cover:
 * Configuration
 
 * Database creation
+ 
+```
+  rails generate model Login username:string password:string
+  rails generate controller Login
+  
+  rails generate model Budget username:string category:string budget:float used:double
+```  
+  what was it like before using form
+  model making and generating controller
+    which files are generated which are manually made how are they generated
+  figure out how login_path relates to login index
+  figure out id
 
 * Database initialization
 
