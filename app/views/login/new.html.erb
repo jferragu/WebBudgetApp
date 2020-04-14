@@ -3,6 +3,11 @@ The line below takes the login and submits the info to the create method.
 If the person already has an account, it will make a new account anyways.
 Therefore, this needs to be changed in the future.
 ––>
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
 <%= form_with scope: :login, url: login_index_path, local: true do |form| %>
   <p>
     <%= form.label :username %><br>

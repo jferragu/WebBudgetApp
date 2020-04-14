@@ -9,11 +9,15 @@ class LoginController < ApplicationController
     
     def create
       @login = Login.new(login_params)
-     
+      begin
       if @login.save
         redirect_to @login
       else
         render 'new'
+      end
+      rescue
+        
+        redirect_to new_login_path, notice: "Username or Password invalid"
       end
     end
     private

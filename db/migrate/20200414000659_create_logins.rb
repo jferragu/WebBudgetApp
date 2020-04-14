@@ -6,5 +6,6 @@ class CreateLogins < ActiveRecord::Migration[5.1]
 
       t.timestamps
     end
+    add_index :logins, :username, unique: true
   end
 end

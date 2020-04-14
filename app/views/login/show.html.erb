@@ -8,3 +8,9 @@
   <strong>Password:</strong>
   <%= @login.password %>
 </p>
+
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
