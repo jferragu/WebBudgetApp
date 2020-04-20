@@ -17,7 +17,9 @@ Things you may want to cover:
   rails generate model Login username:string password:string
   rails generate controller Login
   
-  rails generate model Budget username:string category:string budget:float used:double
+  rails generate model Money username:string category1:string total1:decimal spent1:decimal category2:string total2:decimal spent2:decimal category3:string total3:decimal spent3:decimal category4:string total4:decimal spent4:decimal category5:string total5:decimal spent5:decimal
+  rails db:migrate
+  rails generate controller Money
 ```  
   what was it like before using form
   model making and generating controller

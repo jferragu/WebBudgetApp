@@ -11,7 +11,8 @@ class LoginController < ApplicationController
       @login = Login.new(login_params)
       begin
       if @login.save
-        redirect_to @login
+        session[:login_id] = @login.id
+        redirect_to new_money_path
       else
         render 'new'
       end

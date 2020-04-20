@@ -1,0 +1,21 @@
+<h1>Budget Created! This is your information.</h1>
+<p>
+  <strong>Username:</strong>
+  <%= @money.username %>
+</p>
+ 
+<p>
+  <strong>Category 1:</strong>
+  <%= @money.category1 %>
+</p>
+
+<p>
+  <strong>Total 1:</strong>
+  <%= @money.total1 %>
+</p>
+
+<% flash.each do |type, msg| %>
+  <div>
+    <%= msg %>
+  </div>
+<% end %>
