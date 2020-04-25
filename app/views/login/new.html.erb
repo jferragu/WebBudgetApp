@@ -20,8 +20,12 @@ Therefore, this needs to be changed in the future.
   </p>
  
   <p>
+    <%= check_box_tag(:account) %>
+    <%= label_tag(:account, "Create Account") %>
+  </p>
+  <p>
     <%= form.submit %>
   </p>
 <% end %>
 
-<%= link_to 'Back', login_index_path %>
+<%= link_to 'Back', welcome_index_path %>

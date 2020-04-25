@@ -14,8 +14,8 @@
   <%= @money.total1 %>
 </p>
 
-<% flash.each do |type, msg| %>
-  <div>
-    <%= msg %>
-  </div>
-<% end %>
+<p>
+  <strong>Spent 1:</strong>
+  <%= @money.spent1 %>
+</p>
+<%= link_to 'Edit Budget', edit_money_path %>
