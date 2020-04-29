@@ -1,21 +1,56 @@
-<h1>Budget Created! This is your information.</h1>
+<h1>This is your budget.</h1>
+
 <p>
   <strong>Username:</strong>
   <%= @money.username %>
 </p>
+
+  <table>
+    <tr>
+      <td>Category1</td>
+      <td>Category2</td>
+      <td>Category3</td>
+      <td>Category4</td>
+      <td>Category5</td>
+    </tr>
+    <tr>
+      <td><%= @money.category1 %></td>
+      <td><%= @money.category2 %></td>
+      <td><%= @money.category3 %></td>
+      <td><%= @money.category4 %></td>
+      <td><%= @money.category5 %></td>
+    </tr>
+    <tr>
+      <td>Total1</td>
+      <td>Total2</td>
+      <td>Total3</td>
+      <td>Total4</td>
+      <td>Total5</td>
+    </tr>
+    <tr>
+      <td><%= @money.total1 %></td>
+      <td><%= @money.total2 %></td>
+      <td><%= @money.total3 %></td>
+      <td><%= @money.total4 %></td>
+      <td><%= @money.total5 %></td>
+    </tr>
+    <tr>
+      <td>Spent1</td>
+      <td>Spent2</td>
+      <td>Spent3</td>
+      <td>Spent4</td>
+      <td>Spent5</td>
+    </tr>
+    <tr>
+      <td><%= @money.spent1 %></td>
+      <td><%= @money.spent2 %></td>
+      <td><%= @money.spent3 %></td>
+      <td><%= @money.spent4 %></td>
+      <td><%= @money.spent5 %></td>
+    </tr>
+  </table>
+
  
-<p>
-  <strong>Category 1:</strong>
-  <%= @money.category1 %>
-</p>
 
-<p>
-  <strong>Total 1:</strong>
-  <%= @money.total1 %>
-</p>
 
-<p>
-  <strong>Spent 1:</strong>
-  <%= @money.spent1 %>
-</p>
 <%= link_to 'Edit Budget', edit_money_path %>

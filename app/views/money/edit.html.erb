@@ -5,15 +5,6 @@
   <%= @money.username %>
 </p>
  
-<p>
-  <strong>Category 1:</strong>
-  <%= @money.category1 %>
-</p>
-
-<p>
-  <strong>Total 1:</strong>
-  <%= @money.total1 %>
-</p>
 
 
 <% flash.each do |type, msg| %>
@@ -22,27 +13,53 @@
   </div>
 <% end %>
 <%= form_with scope: :money, url: money_path, method: "put", local: true do |form| %>
+  <table>
+    <tr>
+      <td><%= form.label :category1 %></td>
+      <td><%= form.label :category2 %></td>
+      <td><%= form.label :category3 %></td>
+      <td><%= form.label :category4 %></td>
+      <td><%= form.label :category5 %></td>
+    </tr>
+    <tr>
+      <td><%= @money.category1 %><%= form.text_field :category1 %></td>
+      <td><%= @money.category2 %><%= form.text_field :category2 %></td>
+      <td><%= @money.category3 %><%= form.text_field :category3 %></td>
+      <td><%= @money.category4 %><%= form.text_field :category4 %></td>
+      <td><%= @money.category5 %><%= form.text_field :category5 %></td>
+    </tr>
+    <tr>
+      <td><%= form.label :total1 %></td>
+      <td><%= form.label :total2 %></td>
+      <td><%= form.label :total3 %></td>
+      <td><%= form.label :total4 %></td>
+      <td><%= form.label :total5 %></td>
+    </tr>
+    <tr>
+      <td><%= @money.total1 %><%= form.text_field :total1%></td>
+      <td><%= @money.total2 %><%= form.text_field :total2%></td>
+      <td><%= @money.total3 %><%= form.text_field :total3%></td>
+      <td><%= @money.total4 %><%= form.text_field :total4%></td>
+      <td><%= @money.total5 %><%= form.text_field :total5%></td>
+    </tr>
+    <tr>
+      <td><%= form.label :spent1 %></td>
+      <td><%= form.label :spent2 %></td>
+      <td><%= form.label :spent3 %></td>
+      <td><%= form.label :spent4 %></td>
+      <td><%= form.label :spent5 %></td>
+    </tr>
+    <tr>
+      <td><%= @money.spent1 %><%= form.text_field :spent1%></td>
+      <td><%= @money.spent2 %><%= form.text_field :spent2%></td>
+      <td><%= @money.spent3 %><%= form.text_field :spent3%></td>
+      <td><%= @money.spent4 %><%= form.text_field :spent4%></td>
+      <td><%= @money.spent5 %><%= form.text_field :spent5%></td>
+    </tr>
+  </table>
  
-  <p>
-    <%= form.label :category1 %><br>
-    <%= @money.category1 %>
-    <%= form.text_field :category1%>
-    <%= form.submit 'update' %>
-  </p>
+
   
-  <p>
-    <%= form.label :total1 %><br>
-    <%= @money.total1 %>
-    <%= form.text_field :total1%>
-    <%= form.submit 'update' %>
-  </p>
-  
-  <p>
-    <%= form.label :spent1 %><br>
-    <%= @money.spent1 %>
-    <%= form.text_field :spent1%>
-    <%= form.submit 'update' %>
-  </p>
   
   <p>
     <%= form.submit %>

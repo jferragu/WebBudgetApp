@@ -5,15 +5,36 @@
 <% end %>
 <%= form_with scope: :money, url: money_index_path, local: true do |form| %>
  
-  <p>
-    <%= form.label :category1 %><br>
-    <%= form.text_field :category1%>
-  </p>
-  
-  <p>
-    <%= form.label :total1 %><br>
-    <%= form.text_field :total1%>
-  </p>
+  <table>
+    <tr>
+      <td><%= form.label :category1 %></td>
+      <td><%= form.label :category2 %></td>
+      <td><%= form.label :category3 %></td>
+      <td><%= form.label :category4 %></td>
+      <td><%= form.label :category5 %></td>
+    </tr>
+    <tr>
+      <td><%= form.text_field :category1 %></td>
+      <td><%= form.text_field :category2 %></td>
+      <td><%= form.text_field :category3 %></td>
+      <td><%= form.text_field :category4 %></td>
+      <td><%= form.text_field :category5 %></td>
+    </tr>
+    <tr>
+      <td><%= form.label :total1 %></td>
+      <td><%= form.label :total2 %></td>
+      <td><%= form.label :total3 %></td>
+      <td><%= form.label :total4 %></td>
+      <td><%= form.label :total5 %></td>
+    </tr>
+    <tr>
+      <td><%= form.text_field :total1%></td>
+      <td><%= form.text_field :total2%></td>
+      <td><%= form.text_field :total3%></td>
+      <td><%= form.text_field :total4%></td>
+      <td><%= form.text_field :total5%></td>
+    </tr>
+  </table>
   
   <p>
     <%= form.submit %>

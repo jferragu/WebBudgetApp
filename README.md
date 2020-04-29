@@ -21,7 +21,7 @@ Things you may want to cover:
   rails db:migrate
   rails generate controller Money
   known bug: password doesnt have to be correct to login
-  known bug: loging in without initial budget saved
+  known bug: loging in without initial budget saved (this is resolved i think)
   
 ```  
   what was it like before using form
